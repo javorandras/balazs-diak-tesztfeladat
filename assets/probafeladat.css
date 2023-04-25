@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gameContent {
+    position: relative;
+    background: url('images/background.png');
+    width: 1920px;
+    height: 1080px;
+}
+
+.pool {
+    position: absolute;
+    top: 720px;
+    background: url('images/pool.png');
+    width: 1920px;
+    height: 360px;
+    display: flex;
+}
+
+.pool .fruitBox {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 80px;
+    margin-left: 65px;
+    margin-right: 65px;
+    border: 5px dashed rgba(0, 255, 0, 0);
+    transition: border 0.3s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.pool .fruitBox:hover {
+    cursor: pointer;
+}
+
+.selected {
+    border: 5px dashed rgba(0, 255, 0, 1)!important;
+}
+
+.deactivated {
+    filter: grayscale(1);
+}
+
+.displayArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.container {
+    margin-top: 166.5px;
+    margin-left: 58.5px;
+    margin-right: 58.5px;
+    background: url('images/screen.png');
+    width: 523px;
+    height: 387px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display:flex;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container .containerFruit {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top: 93.5px;
+}
+
+.win {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    display: none;
+}
+
+.win.active {
+    display: flex;
+    margin: 0 auto;
+}
+
+.win .star {
+    background: url('images/star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
